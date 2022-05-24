@@ -1,0 +1,331 @@
+html {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+*:not(i, svg) {
+    font-family: 'Barlow', sans-serif;
+}
+
+a {
+    color: #0072C3;
+    text-decoration: none;
+}
+
+a:focus,
+a.btn:focus {
+    box-shadow: none;
+}
+
+a:hover,
+a.btn:hover {
+    text-decoration: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    border: none;
+    padding: 10px 45px 10px 45px;
+    z-index: 9999;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 7px;
+}
+
+select:focus-visible {
+    outline: none;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.filter-otel-name {
+    margin-left: auto;
+    margin-top: 5px;
+}
+
+.filter-otel-name input {
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    padding: 2px 7px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}
+
+.filter::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 18px;
+    height: 23px;
+    background: url('../images/up-down-arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+select option[disabled]:first-child {
+    display: none;
+}
+
+.header-container {
+    padding: 0 10px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.header-container .nav-bar {
+    display: flex;
+    width: 95vw;
+    margin: auto;
+    white-space: nowrap;
+}
+
+.header-container .nav-bar span {
+    color: #ed1a23;
+    margin-left: 3px;
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: -5px;
+}
+
+.otel-list .left img {
+    object-fit: contain;
+    padding: 10px;
+    background: #fff;
+}
+
+.add-otel {
+    display: flex;
+    align-items: baseline;
+}
+
+.add-otel i {
+    padding: 11px 13px;
+    font-size: 21px;
+    color: #0072C3;
+    border: 1px solid #0072C3;
+    border-radius: 5px;
+    margin: 0 10px 20px 0;
+}
+
+.add-otel span.title {
+    color: #000;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.otel-list .item .inner {
+    position: relative;
+    padding: 7px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.otel-list .item:hover .inner {
+    background: #f8f8f8;
+}
+
+.otel-list .item .inner .div-item-delete {
+    display: none;
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    line-height: 28px;
+    font-size: 1.2em;
+    color: #fff;
+    background: #ea1d24;
+    padding: 0px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.otel-list .item .inner:hover .div-item-delete {
+    display: block;
+}
+
+.otel-list .item .right .point {
+    background-color: #F6F9FD;
+    color: #61D7D2;
+    width: 10.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.otel-list .item .right .item-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.otel-list .item .right .item-buttons a {
+    border: 1px solid #0072C3;
+    background: #fff;
+    color: #0072C3;
+    border-radius: 7px;
+    padding: 5px 14px;
+    font-size: 14px;
+}
+
+.otel-list .item .right .item-buttons a:hover {
+    border: 1px solid #0072C3;
+    background: rgb(73, 74, 255);
+    background: linear-gradient(45deg, rgba(73, 74, 255, 1) 0%, rgba(5, 107, 253, 1) 100%);
+    color: #fff;
+}
+
+
+/*Modal*/
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+.modal-title {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+.modal-footer button {
+    padding: 10px 3rem;
+}
+
+.modal-footer>:focus {
+    box-shadow: none;
+}
+
+.modal-footer>.customBlue {
+    background: rgb(73, 74, 255);
+    background: linear-gradient(45deg, rgba(73, 74, 255, 1) 0%, rgba(5, 107, 253, 1) 100%);
+}
+
+.modal-footer>:not(:first-child) {
+    background-color: #fff;
+    color: #056BFD;
+    border: 1px solid #056BFD;
+}
+
+.modal-header .close {
+    margin: -1rem -1rem -1rem auto;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    font-size: 1.3em;
+    background-color: #EBF1FA;
+    border-radius: 2rem;
+    padding: 5px 10px;
+    opacity: 1;
+    line-height: 1;
+    color: #61656E;
+}
+
+.modal-header .close:focus {
+    outline: none;
+}
+
+.modal-dialog {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-top: -150px;
+}
+
+.modal-body>div {
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.modal-body label,
+.modal-body input {
+    width: 100%;
+}
+
+.modal-body label {
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.modal-body input {
+    padding: 5px 0 5px 5px;
+}
+
+.modal-body input[type="text"] {
+    border-radius: 5px;
+    border: 1px solid #aeaeae;
+}
+
+.modal-body input:focus-visible {
+    outline: none;
+}
+
+.paginationjs-pages>ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.paginationjs-pages>ul li {
+    margin: 0 8px;
+    font-size: 17px;
+}
+
+.paginationjs-pages>ul li.paginationjs-prev,
+.paginationjs-pages>ul li.paginationjs-next {
+    font-size: 21px;
+}
+
+.paginationjs-pages>ul li a {
+    color: #000000;
+}
+
+.paginationjs-pages>ul li.active {
+    font-weight: 700;
+}
+
+
+/*Responsive*/
+
+@media (max-width: 575px) {
+    .otel-list .item .right .item-buttons a {
+        padding: 5px 3vw;
+        font-size: 3vw;
+    }
+    .filter {
+        display: block;
+    }
+    .filter-otel-name {
+        margin-top: 20px;
+    }
+    .filter::before {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .otel-list .item .right .point {
+        width: 100%;
+    }
+}
