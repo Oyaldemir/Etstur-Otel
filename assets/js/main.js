@@ -124,6 +124,8 @@ function ChangeFilter() {
         } else if (selectedVal == 4) {
             GetLocalData("Created", false);
         }
+
+        $("#filterOtelName").val("");
     });
 }
 
