@@ -1,26 +1,30 @@
 # ETSTUR - Case
 
-Yiğit Aldemir'in Etstur için yaptığı çalışmadır.
+Etstur için HTML, CSS ve JS kullanılarak yapılmış çalışmadır.
 
-## Açıklama
+## Ayrıntılar
 
-Oteller özelinde; ekleme, silme, puanlama, filtreleme ve aratma gibi işlemler yapmaktadır.
+- Oteller özelinde; ekleme, silme, puanlama, filtreleme ve aratma gibi işlemler yapmaktadır.
+- İstenilen işlemler dışında, `otelleri adına göre aratma`, `eklenme sırasına göre filtreleme` gibi işlemler eklendi. 
+![eklenti1](https://yigitaldemir.com/assets/img/etsImage2.png "Detay 1")
+- İşlem kolaylığı için otel ekleme pop-up ile birlikte yapıldı.
+- Ek olarak program önyüzü tüm cihazlarda düzgün çalışabilmesi için responsive kodlar eklendi.
 
-İstenilen işlemler dışında, otelleri adına göre aratma, eklenme sırasına göre filtreleme gibi işlemler eklendi. 
+## Kütüphaneler
 
-Ek olarak program önyüzü tüm cihazlarda düzgün çalışabilmesi için responsive kodlar eklendi.
+JQuery, Bootstrap, iconlar için de Fontawesome kullanılmıştır.
 
-## JavaScript Kütüphaneleri
-
-Sadece pagination işlemi için library kullanıldı. Geri kalan her şeyi kendim yazmak istedim.
-
+Ek olarak sadece pagination işlemi için [JS library](https://pagination.js.org/) kullanıldı.
 ```javascript
-$('#foo').pagination();
+$('#foo').pagination()
 ```
 
 ## Kullanım
 
-Index.html'i açarak kullanmaya başlayabilirsiniz.
+Index.html'i açarak kullanmaya başlayabilirsiniz. Dataları sıfırlamak isterseniz;
+```javascript
+localStorage.clear()
+```
 
-## Yazan - Kod Sahibi
+## Yazar
 [Yiğit Aldemir](https://yigitaldemir.com)

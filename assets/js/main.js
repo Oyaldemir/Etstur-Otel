@@ -1,14 +1,14 @@
 $(document).ready(function() {
     GetLocalData("Created");
-
     DeleteModalActive();
     DeleteItem();
     AddOtelActive();
     ChangeItemPoint();
     ChangeFilter();
-
     SetTimeoutClick();
     SetOtelNameSearch();
+
+    // for reset
     // localStorage.clear();
 });
 
@@ -63,8 +63,21 @@ function AddOtelActive() {
                 newOtelUpdatedDate = newOtelCreatedDate;
 
             HtmlHelper(newOtelID, newOtelName, newOtelPoint, newOtelCreatedDate, newOtelUpdatedDate, "prepend");
-            $("#modalAdd").modal('hide');
-            $("#otelName").val("");
+
+            $("[data-modal-add-confirm]").hide();
+            $(".modalAddedBtn").css("display", "flex");
+
+            var customTimeout = setTimeout(() => {
+                $("#modalAdd").modal('hide');
+                $("#otelName").val("");
+            }, 1000);
+
+
+            var customTimeout = setTimeout(() => {
+                $("[data-modal-add-confirm]").show();
+                $(".modalAddedBtn").hide();
+            }, 1500);
+
             ReActivate();
             SetLocalData(newOtelID, newOtelName, newOtelPoint, newOtelCreatedDate, newOtelUpdatedDate);
 
@@ -261,9 +274,6 @@ function ChangeItemPointTool(param, type) {
         "UpdatedDate": newUpdatedDate
     };
     otels.push(otel);
-    // otels.sort(function(a, b) {
-    //     return a.Point - b.Point;
-    // }).reverse();
     localStorage.setItem('otels', JSON.stringify(otels));
 }
 
@@ -278,8 +288,6 @@ function ReActivate() {
     DeleteModalActive();
     ChangeItemPoint();
 }
-
-
 
 var customTimeoutClick = null;
 
