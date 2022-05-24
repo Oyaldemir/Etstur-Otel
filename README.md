@@ -15,12 +15,12 @@ Ek olarak program önyüzü tüm cihazlarda düzgün çalışabilmesi için resp
 Sadece pagination işlemi için library kullanıldı. Geri kalan her şeyi kendim yazmak istedim.
 
 ```javascript
-$('#otel').pagination();
+$('#foo').pagination();
 ```
 
 ## Kullanım
 
-Herhangi ekstra bir işleme gerek yok. Index.html'i açarak kullanmaya başlayabilirsiniz.
+Index.html'i açarak kullanmaya başlayabilirsiniz.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## Yazan - Kod Sahibi
+[Yiğit Aldemir](https://yigitaldemir.com)
